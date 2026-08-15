@@ -13,7 +13,7 @@ async def heartbeat(interval: int = 120):
     try:
         while True:
             logger.info("Heartbeat from video streaming app")
-            asyncio.sleep(interval)
+            await asyncio.sleep(interval)
     except asyncio.CancelledError:
         logger.info("Heartbeat task stopping")
 
